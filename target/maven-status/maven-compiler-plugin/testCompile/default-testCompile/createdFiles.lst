@@ -1,0 +1,5 @@
+RegistrationTest.class
+AuthorizationTest.class
+GoToOwnAccountTest.class
+UnloggedTest.class
+ConstructorTest.class
