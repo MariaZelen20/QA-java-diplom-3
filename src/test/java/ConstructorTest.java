@@ -6,14 +6,11 @@ import io.qameta.allure.junit4.DisplayName;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
 
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.Assert.assertTrue;
 
 public class ConstructorTest {
-    private static WebDriver driver;
-
     @Before
     public void setUp() {
         open("https://stellarburgers.nomoreparties.site/");

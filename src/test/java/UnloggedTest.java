@@ -8,15 +8,12 @@ import io.qameta.allure.junit4.DisplayName;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
 
 import static com.codeborne.selenide.Selenide.open;
 import static java.lang.Thread.sleep;
 import static org.junit.Assert.assertTrue;
 
 public class UnloggedTest {
-
-    private static WebDriver driver;
 
     @Before
     public void setUp() {
@@ -36,15 +33,15 @@ public class UnloggedTest {
         MainPage mainPage = open(MainPage.BASE_URL, MainPage.class);
         mainPage.logInButtonClick();
         AuthorizationPage authorizationPage = open(AuthorizationPage.LOGIN_PAGE, AuthorizationPage.class);
-        AuthorizationPage.setEmail("Router@yandex.ru");
-        AuthorizationPage.setPassword("Router");
-        AuthorizationPage.logInButtonClick();
+        authorizationPage.setEmail("Router@yandex.ru");
+        authorizationPage.setPassword("Router");
+        authorizationPage.logInButtonClick();
         assertTrue(mainPage.isMakeOrderButtonDispayed());
         mainPage.modalWindowExitButtonClick();
         mainPage.personalAreaClick();
         AccountPage accountPage = open(AccountPage.PROFILE_URL, AccountPage.class);
         accountPage.exitButtonClick();
-        assertTrue("Выход из личного кабинета не выпоняется",AuthorizationPage.toComeInIsDispayed());
+        assertTrue("Выход из личного кабинета не выпоняется",authorizationPage.toComeInIsDispayed());
         sleep(10);
     }
 }

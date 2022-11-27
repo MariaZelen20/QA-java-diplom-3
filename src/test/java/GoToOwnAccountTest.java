@@ -8,15 +8,12 @@ import io.qameta.allure.junit4.DisplayName;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
 
 import static com.codeborne.selenide.Selenide.open;
 import static java.lang.Thread.sleep;
 import static org.junit.Assert.assertTrue;
 
 public class GoToOwnAccountTest {
-
-    private static WebDriver driver;
 
     @Before
     public void setUp() {
@@ -45,7 +42,7 @@ public class GoToOwnAccountTest {
         AccountPage accountPage = open(AccountPage.PROFILE_URL, AccountPage.class);
         assertTrue("Переход в личный кабиент с авторизаций не выполняется ",AccountPage.isProfileFieldTextVisible());
         mainPage.personalAreaClick();
-        AccountPage.exitButtonClick();
+        accountPage.exitButtonClick();
         sleep(10);
     }
 }

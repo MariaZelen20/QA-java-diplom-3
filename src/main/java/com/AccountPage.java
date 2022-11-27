@@ -24,7 +24,7 @@ public class AccountPage {
         constructorButton.click();
     }
 
-    public static void exitButtonClick(){
+    public void exitButtonClick(){
         exitButton.click();
     }
 

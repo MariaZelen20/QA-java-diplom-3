@@ -28,19 +28,19 @@ public class AuthorizationPage {
         registerButton.scrollTo().click();
     }
 
-    public static boolean toComeInIsDispayed(){
+    public boolean toComeInIsDispayed(){
         return toСomеInText.shouldBe(Condition.visible).isDisplayed();
     }
 
-    public static void setPassword(String password){
+    public void setPassword(String password){
         passwordField.setValue(password);
     }
 
-    public static void setEmail(String name){
+    public void setEmail(String name){
         emailField.setValue(name);
     }
 
-    public static void logInButtonClick(){
+    public void logInButtonClick(){
         logInButton.scrollTo().click();
     }
 }

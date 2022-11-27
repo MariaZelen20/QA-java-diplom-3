@@ -7,15 +7,12 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
 
 import static com.codeborne.selenide.Selenide.open;
 import static java.lang.Thread.sleep;
 import static org.junit.Assert.assertTrue;
 
 public class AuthorizationTest {
-    private static WebDriver driver;
-
     @Before
     public void setUp() {
         open("https://stellarburgers.nomoreparties.site/login");
